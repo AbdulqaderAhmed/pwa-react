@@ -33,7 +33,7 @@
       "purpose": "any"
     }
   ],
-  "start_url": "https://userlist32.netlify.app/",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
