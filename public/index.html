@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/kmslogo.78ccf289.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="React PWA" />
+    <link rel="apple-touch-icon" href="/assets/kmslogo.78ccf289.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <title>PWA-React</title>
+    <script type="module" crossorigin src="/assets/index.261e71f9.js"></script>
+    <link rel="stylesheet" href="/assets/index.f375814f.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => console.log("Success", reg.scope))
+            .catch((err) => console.log("Failure", err));
+        });
+      }
+    </script>
+  </body>
+</html>
